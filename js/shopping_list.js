@@ -38,13 +38,13 @@ ShoppingList.prototype.removeItem = function(shoppingItem){
 
 ShoppingList.prototype.render = function(){
 
-  var line;
-  var output ="<ul></ul>";
-
+ 
+  var output = document.createElement("ul");
+  var line = document.createElement("li");
   
  this.items.forEach(function(name){
 
-    line = "<li>" + name + "</li>" ;
+    line.appendChild(document.createTextNode(name));
     output.appendChild(line);
 
   });
