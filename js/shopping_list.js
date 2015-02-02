@@ -42,13 +42,14 @@ ShoppingList.prototype.render = function(){
   var output = document.createElement("ul");
   var line = document.createElement("li");
   
- this.items.forEach(function(name){
 
-    line.appendChild(document.createTextNode(name));
+
+    line.appendChild(document.createTextNode(this.items[this.items.length-1].name + " " + this.items[this.items.length-1].description + " "));
     output.appendChild(line);
 
-  });
+ 
   
     return output;
+
 
 };
