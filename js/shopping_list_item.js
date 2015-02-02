@@ -28,7 +28,7 @@ ShoppingListItem.prototype.uncheck = function(){
 ShoppingListItem.prototype.render = function(){
 
 
- return "<li><span>" + this.name.concat(this.description)+"</span></li>";
+ return "<li><span>" + this.name + "</span><span>" + this.description + "</span></li>";
 
 
 };
