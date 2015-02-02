@@ -11,7 +11,7 @@ function ShoppingList(items){
 ShoppingList.prototype.addItem = function(item){
 
 
-  this.items.push(item.name);
+  this.items.push(item);
 
 };
 
@@ -44,7 +44,7 @@ ShoppingList.prototype.render = function(){
   
 
 
-    line.appendChild(document.createTextNode(this.items[this.items.length-1].name + " " + this.items[this.items.length-1].description + " "));
+    line.appendChild(document.createTextNode(this.items[this.items.length-1].name + " : " + this.items[this.items.length-1].description + " "));
     output.appendChild(line);
 
  

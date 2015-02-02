@@ -9,7 +9,7 @@ var aList;
 var itemList = new ShoppingList([]);
 var newFood;
 
-console.log("shopping");
+
 function add_to_shopping_list(){
 
    food =  document.getElementById("foodName").value;
@@ -18,12 +18,14 @@ function add_to_shopping_list(){
    newFood = new ShoppingListItem(food,description);
 
 
-   
-    itemList.addItem(newFood);
-    aList = itemList.render();
+   itemList.addItem(newFood);
+   aList = itemList.render();
 
-    content = document.getElementById("content");
-    content.appendChild(aList);
+   content = document.getElementById("content");
+   content.appendChild(aList);
+
+   document.getElementById("foodName").value= "";
+   document.getElementById("foodDescript").value = "";
 
 
 }
