@@ -15,13 +15,10 @@ ShoppingList.prototype.removeItem = function (item) {
   if (item instanceof ShoppingListItem) {
     var idx = this.items.indexOf(item);
 
-    if (idx !== -1) {  // item is in list
+     
       this.items.splice(idx, 1);
       return true;
-    }
-
-    console.log('not found');
-    return false;
+  
   }
 
   if (item === undefined) {
@@ -29,9 +26,6 @@ ShoppingList.prototype.removeItem = function (item) {
     this.items.pop();
     return true;
   }
-
-  console.log('invalid object');
-  return false;
 
 };
 

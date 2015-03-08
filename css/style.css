@@ -1,0 +1,24 @@
+
+.x{
+
+ color:red;
+  font-size:2em;
+  text-decoration: none;
+
+}
+.checkbox{
+
+  height:1em;
+  width:1em;
+  font-size: 120%;
+}
+
+.name{
+  font-size: 2em;
+  color:blue;
+}
+
+.description{
+  font-size: 2em;
+  color:#FFA200;
+}

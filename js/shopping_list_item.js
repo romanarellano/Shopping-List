@@ -1,3 +1,6 @@
+
+  
+
 function ShoppingListItem(name, description) {
   this.name = name;
   this.description = description;
@@ -13,12 +16,23 @@ ShoppingListItem.prototype.uncheck = function() {
 };
 
 ShoppingListItem.prototype.render = function(idx) {
-  return '<li class="' +
-    (this.is_done ? "finished_item" : "unfinished_item") +
-    '">' +
-    '<span class="delItem" onclick="removeItemButtonClicked(' + idx + ')">x</span>' +
-    '<input type="checkbox" onchange=\'changeCheckedStatus("' + idx + '");\'' + (this.is_done ? 'checked' : '') + '/>' +
-    '<span>' + this.name + "</span> " +
-    "<span>" + this.description + "</span> </li>";
+  
+  
+  var name = '<span class="name">' + this.name + '</span>';
+
+  var description = '<span class="description">' + this.description + "</span>";
+
+  var deletion = '<span class="delete" onclick="removeItem(' + idx + ')"><a class="x" href="">x</a>' + "</span>";
+
+  var checkbox = '<input type="checkbox" onchange="checkChange(' + idx + ')" class="checkbox">';
+
+  
+return '<li>' + deletion + checkbox +  name + " " + description + " " + '</li>' ;
+
+
 };
+
+
+  
+
 
